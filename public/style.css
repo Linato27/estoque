@@ -1,0 +1,28 @@
+body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(assets/playstation-symbols-3840x2160-27303.jpg);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+         
+}
+        #box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        input,
+        button {
+            cursor: pointer;
+            border-radius: 2px;
+            margin-bottom: 10px;
+            border: solid white;
+            text-align: center;
+            
+        }

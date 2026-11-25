@@ -1,0 +1,46 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+
+    function cadastrar() {
+
+        var item = document.getElementById("item").value;
+        var setor = document.getElementById("setor").value;
+        var preco = document.getElementById("preço").value;
+        var qtd = document.getElementById("qtd").value;
+
+        fetch("http://localhost:3000/estoque/" + item + "/" + setor + "/" + qtd + "/" + preco)
+            .then(res => res.text())
+            .then(data => {
+                alert(data);
+            });
+
+    }
+
+</script>
+
+<body>
+
+    <form>
+
+        <p>CONTROLE DE ESTOQUES</p>
+
+        <div id="box">
+            <input placeholder="Item" type="text" id="item">
+            <input placeholder="Setor" type="text" id="setor">
+            <input placeholder="Preço" type="text" id="preço">
+            <input placeholder="Quantidade" type="number" id="qtd">
+
+            <button type="button" id="btncadastrar" onclick="cadastrar()"> Cadastrar
+            </button>
+        </div>
+    </form>
+</body>
+
+</html>
